@@ -5,12 +5,12 @@ const { updateCart, AddToCart, RemoveFromCart, RemoveAllCart, GetCart } = requir
 
 const BuyItems = require('../Controllers/purchase')
 
-// router.route("/").
+router.route("/").put(updateCart).put(AddToCart)
 
 router.route("cart").get(GetCart).delete(RemoveFromCart).delete(RemoveAllCart)
 router.route("cart:id").delete(RemoveFromCart)
 
-// router.route("purchase").
+router.route("purchase").put(BuyItems)
 
 
 module.exports = router;

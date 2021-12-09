@@ -14,6 +14,13 @@ const connectDB = require("./DB/connect");
 const ShopRoute = require('./Routes/ShopRoute')
 const CartRoute = require('./Routes/CartRoute')
 
+const cloudinary = require('cloudinary').v2
+cloudinary.config({ 
+    cloud_name: process.env.cloud_name,
+    api_key: process.env.api_key,
+    api_secret: process.env.api_secret,
+  });
+
 const notFoundMiddlewere = require("./Middleware/Not-found")
 const errorMiddlewere = require("./Middleware/Error-handler");
 
@@ -24,9 +31,10 @@ app.use(express.json())
 app.use(express.static('./Public'))
 
 app.get('/', (req, res)=> {
-    res.send("<h1>File upload starter</h1>")
+    res.send("<h1>starter text</h1>")
 })
 
+app.use ("/api/v1/NFT", ShopRoute)
 // app.post("/stripe", stripeController)
 
 .use(errorMiddlewere)

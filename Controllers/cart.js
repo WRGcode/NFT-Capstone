@@ -25,6 +25,7 @@ const RemoveFromCart = async (req, res) => {
 const RemoveAllCart = async (req, res) => {
     const NFTs = await CartSchema.deleteMany({})
     res.json({ method: req.method, NFTs: NFTs });
+    res.status(200).json({ NFT })
 }
 
 const GetCart = async (req, res) => {
