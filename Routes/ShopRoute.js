@@ -7,6 +7,6 @@ const uploadNFTImage = require('../Controllers/uploadImage')
 
 router.route("/").get(GetAllShop).post(CreateNFT)
 router.route("/:id").delete(DeleteNFT)
-router.route("upload").post(uploadNFTImage)
+router.route("/upload").post(uploadNFTImage)
 
 module.exports = router;

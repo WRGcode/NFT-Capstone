@@ -309,4 +309,32 @@ max-width: 400px;
     }
   }
 
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+
+
+  
+  .home-btn{
+    cursor: pointer;
+    color: var(--white);
+    background: var(--primary-500);
+    border: transparent;
+    border-radius: var(--borderRadius);
+    letter-spacing: var(--letterSpacing);
+    padding: .7rem 1rem;
+    box-shadow: var(--shadow-1);
+    transition: var(--transition);
+    text-transform: capitalize;
+    display: inline-block;
+    
+  }
+
+  .flex-parent {
+    display: flex;
+    justify-content: center;
+    
+  
+  }
+
   

@@ -61,8 +61,9 @@ async function fetchProducts() {
             return `<article class="product">
             <img src="${each.image}" alt="${each.name}" class="img" />
             <footer>
-            <p>${each.name}</p>
-            <span>${each.price}</span>
+            <h2>${each.name}</h2>
+            <h1>${each.price}</h1>
+            <button>Add to Cart</button>
             </footer>
             </article>`;
         })
@@ -74,3 +75,4 @@ async function fetchProducts() {
 }
 
 fetchProducts()
+//🛒

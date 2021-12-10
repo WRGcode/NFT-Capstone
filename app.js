@@ -3,6 +3,7 @@ require("express-async-errors");
 
 const express = require("express");
 const app = express();
+const fileUpload = require('express-fileupload')
 
 const NFTs = require('./Controllers/NFTs')
 const cart = require('./Controllers/cart')
@@ -26,18 +27,15 @@ const errorMiddlewere = require("./Middleware/Error-handler");
 
 const port = process.env.PORT || 3000
 app.use(express.json())
-// app.use(fileUpload({useTempFiles: true}))
+app.use(fileUpload({useTempFiles: true}))
 
 app.use(express.static('./Public'))
 
-app.get('/', (req, res)=> {
-    res.send("<h1>starter text</h1>")
-})
-
 app.use ("/api/v1/NFT", ShopRoute)
-// app.post("/stripe", stripeController)
+app.use ("/api/v1/cart", CartRoute)
 
-.use(errorMiddlewere)
+
+// .use(errorMiddlewere
 .use(notFoundMiddlewere)
 
 const start = async() => {

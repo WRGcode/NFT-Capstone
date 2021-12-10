@@ -7,10 +7,10 @@ const BuyItems = require('../Controllers/purchase')
 
 router.route("/").put(updateCart).put(AddToCart)
 
-router.route("cart").get(GetCart).delete(RemoveFromCart).delete(RemoveAllCart)
-router.route("cart:id").delete(RemoveFromCart)
+router.route("/cart").get(GetCart).delete(RemoveFromCart).delete(RemoveAllCart)
+router.route("/cart:id").delete(RemoveFromCart)
 
-router.route("purchase").put(BuyItems)
+router.route("/purchase").put(BuyItems)
 
 
 module.exports = router;
