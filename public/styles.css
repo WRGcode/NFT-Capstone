@@ -266,6 +266,7 @@ max-width: 400px;
   max-width: var(--max-width);
   margin:0 auto;
   padding: 3rem 0;
+  text-align: center;
 }
 
 
@@ -275,8 +276,9 @@ max-width: 400px;
 }
 
 .container img {
-    height: 175px;
+    height: 200px;
     border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
   }
 .container footer {
     margin-top: 1rem;
@@ -290,10 +292,15 @@ max-width: 400px;
     text-transform:capitalize;
     letter-spacing: var(--letterSpacing);
     font-weight: 500;
+    /* overflow-wrap: break-word; */
+    word-break: break-all;
   }
  .container footer span {
     color: var(--primary-500);
     letter-spacing: var(--spacing);
+    word-break: break-all;
+    /* overflow-wrap: break-word; */
+
   }
 
 
@@ -337,4 +344,13 @@ max-width: 400px;
   
   }
 
-  
+  .shop-form{
+    width: 90vw;
+  max-width: var(--fixed-width);
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  padding: 1rem 1rem;
+  margin: 1rem auto;
+  text-align: center;
+  }

@@ -12,7 +12,7 @@ let imageValue;
 fileForm.addEventListener('submit', async (e) => {
     e.preventDefault()
     const nameValue = nameInput.value
-    const priceValue = nameInput.value
+    const priceValue = PriceInput.value
     console.log('testing ');
     try {
         const product = { name: nameValue, price: priceValue, image: imageValue }
