@@ -21,7 +21,7 @@ async function fetchProducts() {
             <footer>
             <p>${each.name}</p>
             <span>${each.price}</span>
-            <button>Add to Cart</button>
+            <button>+🛒</button>
             </footer>
             </article>`;
         })

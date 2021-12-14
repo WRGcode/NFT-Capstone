@@ -8,14 +8,41 @@
     <title>NFT Capstone PurchasePage</title>
     <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./purchase.css">
 </head>
 
 <body>
-    <a href="./Cart.html"><button class="home-btn">Back to Cart</button></a></div>
+    <ul class="nav-bar">
+        <li><a href="./Shop.html">Store</a></li>
+        <li><a href="./Cart.html">Cart</a></li>
+        <li><a href="./Purchase.html">Purchase</a></li>
+        <li style="float:right"><a href="./Upload.html">Upload</a></li>
+    </ul>
     <h4>NFT PurchasePage</h4>
+
+    <section class="section section-center content">
+        <form id="payment-form">
+            <p>test card number: 4242 4242 4242 4242</p>
+            <!--  -->
+            <div id="card-element">
+                <!-- stript.js automatically injects html here -->
+            </div>
+            <button type="submit" is="submit">
+                <div class="spinner hidden" id="spinner"></div>
+                <span id="button-text">pay</span>
+            </button>
+            <p id="card-error" role="alert"></p>
+            <p class="result-message hidden">
+                payment succeeded, see the result in your
+                <a href="https://dashboard.stripe.com/dashboard" target="_blank">Stript dashboard</a>
+                refresh the page to pay again
+            </p>
+        </form>
+    </section>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+<script src="purchase.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
     integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
 </html>
