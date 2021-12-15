@@ -31,8 +31,8 @@ app.use(fileUpload({useTempFiles: true}))
 
 app.use(express.static('./Public'))
 
-app.use ("/api/v1/NFT", ShopRoute)
 app.use ("/api/v1/cart", CartRoute)
+app.use ("/api/v1/NFT", ShopRoute)
 
 
 // .use(errorMiddlewere

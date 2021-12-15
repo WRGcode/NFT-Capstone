@@ -5,9 +5,8 @@ const { updateCart, AddToCart, RemoveFromCart, RemoveAllCart, GetCart } = requir
 
 const BuyItems = require('../Controllers/purchase')
 
-router.route("/").put(updateCart).put(AddToCart)
-router.route("/cart").get(GetCart).delete(RemoveFromCart).delete(RemoveAllCart)
-router.route("/cart:id").delete(RemoveFromCart)
+router.route("/").post(AddToCart).get(GetCart).delete(RemoveAllCart)
+router.route("/:id").delete(RemoveFromCart)
 
 router.route("/purchase").put(BuyItems)
 
