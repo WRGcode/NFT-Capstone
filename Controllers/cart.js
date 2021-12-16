@@ -8,17 +8,15 @@ const CartSchema = require('../models/CartSchema')
 const AddToCart = async (req, res) => {
     const { id } = req.body
     const NFT = await NFTSchema.findById(id)
-    const {name, price, image} = NFT
-    const addedItem = await CartSchema.create({name, price, image})
+    const { name, price, image } = NFT
+    const addedItem = await CartSchema.create({ name, price, image })
     res.status(200).json({ addedItem })
 }
 
 const RemoveFromCart = async (req, res) => {
-        const { id } = req.body;
-        const NFT = await CartSchema.findById(id)
-        const removeItem = await CartSchema.deleteOne({name, price, image})
-        const {name, price, image} = NFT
-        res.status(200).json({ removeItem })
+    const { id } = req.params;
+    const RemoveNFT = await CartSchema.findByIdAndDelete(id)
+    res.status(200).json({ RemoveNFT })
 }
 
 const RemoveAllCart = async (req, res) => {

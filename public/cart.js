@@ -7,8 +7,8 @@ const container = document.querySelector('.container')
 let imageValue;
 
 const RemoveFromCart = async (id) =>{
-    const RemoveItem = await axios.delete(`${url2}`, {id})
-    console.log(RemoveItem);
+    const RemoveNFT = await axios.delete(`${url2}/${id}`)
+    console.log(RemoveNFT);
 }
 
 
@@ -23,7 +23,7 @@ async function fetchProducts() {
             <footer>
             <p>${each.name}</p>
             <span>${each.price}</span>
-            <button class="remove-btn" onclick="('RemoveFromCart')">Remove</button>
+            <button class="remove-btn" onclick="RemoveFromCart('${each._id}')">Remove</button>
             </footer>
             </article>`;
         })
