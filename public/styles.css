@@ -407,3 +407,40 @@ max-width: 400px;
 .nav-block li a:hover:not(.active) {
   background-color: rgb(216, 216, 216);
 }
+
+.add-btn {
+  cursor: pointer;
+  color: var(--white);
+  background: rgb(0, 172, 9);
+  border: transparent;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.375rem 0.75rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+}
+.add-btn:hover {
+  background: rgb(0, 204, 10);
+  box-shadow: var(--shadow-3);
+}
+
+.remove-btn {
+  cursor: pointer;
+  color: var(--white);
+  background: rgb(255, 85, 85);
+  border: transparent;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.375rem 0.75rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+}
+.remove-btn:hover {
+  background: rgb(204, 68, 68);
+  box-shadow: var(--shadow-3);
+}
+

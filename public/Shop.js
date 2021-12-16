@@ -7,8 +7,9 @@ const fileForm = document.querySelector(".file-form")
 const container = document.querySelector('.container')
 let imageValue;
 
-const AddToCart = async (id) =>{
-    axios.post()
+const AddToCart = async (id) => {
+    const addedItem = await axios.post(`${url2}`, {id})
+    console.log(addedItem);
 }
 
 
@@ -23,7 +24,7 @@ async function fetchProducts() {
             <footer>
             <p>${each.name}</p>
             <span>${each.price}</span>
-            <button class="btn" onclick="AddToCart('${each._id}')">+🛒</button>
+            <button class="add-btn" onclick="AddToCart('${each._id}')">+🛒</button>
             </footer>
             </article>`;
         })

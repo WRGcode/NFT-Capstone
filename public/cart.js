@@ -7,7 +7,8 @@ const container = document.querySelector('.container')
 let imageValue;
 
 const RemoveFromCart = async (id) =>{
-    axios.delete
+    const RemoveItem = await axios.delete(`${url2}`, {id})
+    console.log(RemoveItem);
 }
 
 
@@ -15,14 +16,14 @@ async function fetchProducts() {
     try {
         const {
             data: { NFT }
-        } = await axios.get(url)
+        } = await axios.get(url2)
         const tempProducts = NFT.map(each => {
             return `<article class="product">
             <img src="${each.image}" alt="${each.name}" class="img" />
             <footer>
             <p>${each.name}</p>
             <span>${each.price}</span>
-            <button class="btn" onclick="('RemoveFromCart')">Remove</button>
+            <button class="remove-btn" onclick="('RemoveFromCart')">Remove</button>
             </footer>
             </article>`;
         })
